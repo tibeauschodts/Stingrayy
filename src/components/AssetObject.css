@@ -1,0 +1,57 @@
+.asset-object {
+    color: #0F1026;
+    margin-bottom: 2rem;
+    margin-top: 6rem;
+    max-width: 65vw;
+}
+
+.asset-object img {
+    max-height: 300px;
+}
+
+.asset-object h3 {
+    font-size: 2.1rem;
+    line-height: 2.4rem;
+    margin-bottom: 1rem;
+}
+
+.asset-object .description {
+    margin-bottom: 2.3rem;
+}
+
+.asset-object .description .date {
+    color: #4a4a4a;
+}
+
+.link {
+    margin-right: 1rem;
+}
+
+.symbol {
+    background-color: #3291E9;
+    border-radius: 10px;
+    color: #ffffff;
+    margin-top: 0.3rem;
+    max-width: 9rem;
+    padding: 0.6rem;
+    text-align: center;
+}
+
+/* On screens that are 1200px or less */
+
+@media screen and (max-width: 1200px) {
+    .asset-object {
+        max-width: 85vw;
+    }
+}
+
+/* On screens that are 1200px or less */
+
+@media screen and (max-width: 768px) {
+    .asset-object .description {
+        margin-bottom: 1rem;
+    }
+    .symbol {
+        display: none;
+    }
+}

@@ -1,0 +1,36 @@
+.navbar-burger {
+    margin-right: 0.5rem;
+    margin-top: 1rem;
+}
+
+.navbar-item img {
+    max-height: 60px;
+}
+
+a.navbar-item, a.navbar-link {
+    color: #0F1026;
+}
+
+a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-item.is-active, 
+.navbar-link:focus, .navbar-link:focus-within, .navbar-link:hover, .navbar-link.is-active {
+    background-color: #ffffff;
+}
+
+.navbar {
+    border-radius: 2px;
+    box-shadow: 0px 1px 10px rgb(212, 212, 212);
+}
+
+
+@media screen and (min-width: 1024px) {
+    .navbar {
+        min-height: 5rem;
+        vertical-align: center;        
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .navbar-item img {
+        max-height: 45px;
+    }
+}

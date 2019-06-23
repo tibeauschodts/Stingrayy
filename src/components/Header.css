@@ -1,0 +1,40 @@
+header {
+    background-color: #3291E9;
+    height: 58vh;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+header .title, header .subtitle {
+    color: #ffffff;
+}
+
+header .title {
+    font-size: 4.5rem;
+    padding-bottom: 0.5rem;
+    padding-top: 21vh;
+}
+
+header .subtitle {
+    font-size: 2.5rem;
+}
+
+/* On screens that are 600px or less */
+@media screen and (max-width: 600px) {
+    header {
+        height: 75vh;
+    }
+}
+
+/* On screens that are 400px or less */
+@media screen and (max-width: 400px) {
+    header .title {
+        font-size: 2.4rem;
+    }
+
+    header .subtitle {
+        font-size: 2.1rem;
+        max-width: 95%;
+    }
+}

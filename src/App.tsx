@@ -1,26 +1,47 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import { Asset as IAsset } from './interfaces/Asset';
+import * as HTTPService from './services/HTTPService';
 
-const App: React.FC = () => {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import Header from './components/Header';
+import Navigation from './components/Navigation';
+import AssetObject from './components/AssetObject';
+
+export default class App extends Component<{}, {assets: IAsset[]}> {
+    constructor(props: any) {
+        super(props);
+
+        this.state = {
+            assets: []
+        }
+    }
+
+    componentWillMount() {
+        HTTPService.getAssets()
+            .then(res => {
+                this.setState({
+                    assets: res
+                });
+            });
+    }
+
+    showAssets() {
+        if (this.state.assets) {
+            return (
+                this.state.assets.map(asset => (
+                    <AssetObject key={asset.token_id} token_id={asset.token_id} name={asset.name} description={asset.description} symbol={asset.symbol} created_date={asset.created_date} image_url={asset.image_url} external_link={asset.external_link} opensea_link={asset.opensea_link} />
+                ))
+            )
+        }
+    }
+
+    render() {
+        return (
+            <div>
+                <Navigation />
+                <Header />
+                
+                {this.showAssets()}
+            </div>
+        )
+    }
 }
-
-export default App;
