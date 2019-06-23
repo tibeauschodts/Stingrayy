@@ -10,11 +10,18 @@ export default class App extends Component<{}, {assets: IAsset[]}> {
     constructor(props: any) {
         super(props);
 
+        /**
+         * Initialises the state of the App component to expect an array of objects like IAsset.
+         */
         this.state = {
             assets: []
         }
     }
 
+    /**
+    * When the component is ready, use the HTTPService to make a HTTP request and get the assets,
+    * add these assets to the state of the component
+    */
     componentWillMount() {
         HTTPService.getAssets()
             .then(res => {
@@ -24,6 +31,9 @@ export default class App extends Component<{}, {assets: IAsset[]}> {
             });
     }
 
+    /**
+     * If state.assets is filled, map through them and create a AssetObject component for each asset.
+     */
     showAssets() {
         if (this.state.assets) {
             return (

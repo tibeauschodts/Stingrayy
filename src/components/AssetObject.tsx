@@ -13,6 +13,9 @@ const imagePath = require('../images/NoImage.svg') as string;
 
 export default class AssetObject extends Component<IAsset> {
     showImage(image_url: any) {
+        /**
+         * Check if the image_url of the Asset exists. If it doesn't exist, use a placeholder image.
+         */
         if (image_url) {
             return (
                 <Image src={image_url} alt="Asset illustration" role="presentation" />
