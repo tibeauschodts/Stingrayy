@@ -6,8 +6,8 @@ Stingrayy is a NFT (non-fungible token) browser using the OpenSea API. The appli
 
 **Here's a list of all technologies that were used and why:**
 
- - React as the main framework
- - Typescript and the required types for better typing and quicker error handling
+ - [React](https://github.com/facebook/create-react-app) as the main framework
+ - [Typescript](https://www.typescriptlang.org/) and the required types for better typing and quicker error handling
  - [Axios](https://github.com/axios/axios) to send HTTP requests to the backend server
  - [Rbx](https://dfee.github.io/rbx/) as the UI framework (based on Bulma, written in TypeScript) to quickly build components for the application
 
