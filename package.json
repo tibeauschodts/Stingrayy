@@ -1,6 +1,7 @@
 {
-  "name": "frontend",
+  "name": "stingrayy",
   "version": "0.1.0",
+  "description": "Stingrayy is a NFT browser using the OpenSea API",
   "private": true,
   "dependencies": {
     "@types/jest": "24.0.15",
@@ -13,10 +14,18 @@
     "rbx": "^2.2.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-loading-skeleton": "^1.1.2",
     "react-scripts": "3.0.1",
     "typescript": "3.5.2"
   },
+  "keywords": [
+    "opensea",
+    "heroku",
+    "rbx",
+    "react",
+    "axios",
+    "typescript"
+  ],
+  "author": "Tibeau Schodts",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
