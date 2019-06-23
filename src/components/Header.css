@@ -23,7 +23,7 @@ header .subtitle {
 /* On screens that are 600px or less */
 @media screen and (max-width: 600px) {
     header {
-        height: 97vh;
+        height: 92vh;
     }
 }
 
