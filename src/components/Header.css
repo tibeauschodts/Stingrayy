@@ -8,6 +8,7 @@ header {
 
 header .title, header .subtitle {
     color: #ffffff;
+    margin: 0 0.5rem;
 }
 
 header .title {
